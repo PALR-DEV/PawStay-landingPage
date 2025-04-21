@@ -78,7 +78,7 @@
             go‑to network for verified sitters.</p>
           <p>We connect you with nearby, PawStay‑verified pet sitters, giving your pet trusted care while
             you’re away.</p>
-          <a href="#" class="about-cta">Learn More →</a>
+          <a href="#howItWorks" class="about-cta">Learn More →</a>
         </div>
         <div class="about-image">
           <img
@@ -90,7 +90,7 @@
   </section>
 
 
-  <section class="how-it-works">
+  <section id="howItWorks" class="how-it-works">
     <h2 class="how-title">How PawStay Works</h2>
 
     <div class="steps">
@@ -200,6 +200,19 @@
   </section>
 
 
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
 
 </body>
 
