@@ -78,7 +78,7 @@
             go‑to network for verified sitters.</p>
           <p>We connect you with nearby, PawStay‑verified pet sitters, giving your pet trusted care while
             you’re away.</p>
-          <a href="#howItWorks" class="about-cta">Learn More →</a>
+          <a href="#" class="about-cta">Learn More →</a>
         </div>
         <div class="about-image">
           <img
@@ -90,7 +90,7 @@
   </section>
 
 
-  <section id="howItWorks" class="how-it-works">
+  <section class="how-it-works">
     <h2 class="how-title">How PawStay Works</h2>
 
     <div class="steps">
@@ -188,7 +188,7 @@
     <div class="waitlist-container">
       <div class="waitlist-content">
         <h2>Join Our Waitlist Today</h2>
-        <form id="waitlistForm" class="form-modern">
+        <form method="post" id="waitlistForm" class="form-modern" action="https://script.google.com/macros/s/AKfycbxk10I7FdZAQr9ihxXmqgqWW0Ry3YXgdSP6sVjDcyEmIq0sR9QdPRuBvNRcmL9PKBka/exec" onsubmit="this.reset(); alert('Thanks! You’re on the waitlist now.'); return false;">
           <div class="form-row">
             <input type="text" id="name" name="name" required placeholder="Your Name">
             <input type="email" id="email" name="email" required placeholder="Your Email">
@@ -201,19 +201,9 @@
 
 
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    });
-  </script>
-
 </body>
 
 </html>
+
+
+<!-- https://script.google.com/macros/s/AKfycbzTCtZd7BKaGCwxgP0wGPahJ7TxvjJc5TnAGn3zoYEojBl__M7TWOTlmPVNoijMNxac/exec-->
