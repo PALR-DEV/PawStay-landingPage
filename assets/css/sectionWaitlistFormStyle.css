@@ -1,0 +1,106 @@
+.waitlist-section {
+    position: relative;
+    padding: 120px 20px;
+    background-image: url('https://img.freepik.com/free-vector/flat-design-dog-pool-party-illustration_52683-116472.jpg?t=st=1745261679~exp=1745265279~hmac=9f7d43cb455e9ceeb399c073cca2efddf368fbd8b7fc3523116ef3657c60493e&w=1380');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.waitlist-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.waitlist-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.waitlist-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.waitlist-content h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.form-modern {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 16px 24px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+.form-row input:focus {
+    background: #ffffff;
+    outline: none;
+    border-color: #000000;
+    transform: translateY(-1px);
+}
+
+.form-row input::placeholder {
+    color: #999999;
+    font-weight: 500;
+}
+
+.submit-button {
+    padding: 16px 32px;
+    background: #000000;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        background: transparent;
+        padding: 0;
+        gap: 16px;
+    }
+    
+    .waitlist-content h2 {
+        font-size: 2rem;
+    }
+}

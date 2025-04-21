@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+    --clr-bg: #f9fafb;
+    --clr-card: #ffffff;
+    --clr-primary: #10b981;         /* emerald‑green accent */
+    --clr-text: #111827;            /* near‑black for good contrast */
+    --radius: 12px;
+    --shadow: 0 6px 14px rgba(0,0,0,0.06);
+    --transition: 0.25s ease;
+  }
+  
+  .how-it-works {
+    background: var(--clr-bg);
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .how-title {
+    font-size: clamp(1.6rem, 2vw + 1rem, 2.25rem);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--clr-text);
+  }
+
+  .step-icon {
+    height: 300px;               /* match your tallest Lottie */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .step-text {
+    margin-top: auto;
+    text-align: center;
+  }
+  
+  .steps .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* align text at bottom */
+    text-align: center;
+    height: 100%;                    /* fill the grid row */
+    background: var(--clr-card);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem 2.5rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  .steps .step lottie-player {
+    margin-bottom: 1rem;
+  }
+
+  
+  
+  .step {
+    background: var(--clr-card);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem 2.5rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  
+  .step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+  
+  .step-number {
+    display: inline-block;
+    background: var(--clr-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--clr-text);
+  }
+  
+  .step p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4b5563; /* gray‑600 */
+  }
+  
+  /* Small screens tweak (optional) */
+  @media (max-width: 599px) {
+    .step {
+      padding: 1.75rem 1.25rem 2rem;
+    }
+  }
