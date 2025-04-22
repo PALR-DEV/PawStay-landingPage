@@ -188,7 +188,7 @@
     <div class="waitlist-container">
       <div class="waitlist-content">
         <h2>Join Our Waitlist Today</h2>
-        <form method="post" id="waitlistForm" class="form-modern" action="https://script.google.com/macros/s/AKfycbxk10I7FdZAQr9ihxXmqgqWW0Ry3YXgdSP6sVjDcyEmIq0sR9QdPRuBvNRcmL9PKBka/exec" onsubmit="this.reset(); alert('Thanks! You’re on the waitlist now.'); return false;">
+        <form method="post" id="waitlistForm" class="form-modern" action="https://script.google.com/macros/s/AKfycbxk10I7FdZAQr9ihxXmqgqWW0Ry3YXgdSP6sVjDcyEmIq0sR9QdPRuBvNRcmL9PKBka/exec" >
           <div class="form-row">
             <input type="text" id="name" name="name" required placeholder="Your Name">
             <input type="email" id="email" name="email" required placeholder="Your Email">
@@ -198,6 +198,17 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
 
 
