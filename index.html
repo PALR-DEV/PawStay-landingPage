@@ -188,13 +188,15 @@
     <div class="waitlist-container">
       <div class="waitlist-content">
         <h2>Join Our Waitlist Today</h2>
-        <form method="post" id="waitlistForm" class="form-modern" action="https://script.google.com/macros/s/AKfycbxk10I7FdZAQr9ihxXmqgqWW0Ry3YXgdSP6sVjDcyEmIq0sR9QdPRuBvNRcmL9PKBka/exec" >
+        <form method="post" id="waitlistForm" class="form-modern" action="https://script.google.com/macros/s/AKfycbxjc29vVOjS3651CpQl1OTXgA_ID50UAe-xOZObe_x63AFXLGiAJSCOb7TC-ZTwJR9a/exec" >
           <div class="form-row">
             <input type="text" id="name" name="name" required placeholder="Your Name">
             <input type="email" id="email" name="email" required placeholder="Your Email">
             <button type="submit" class="submit-button">Join Waitlist</button>
           </div>
         </form>
+
+        <div id="formAlert" class="form-alert" style="display:none;"></div>
       </div>
     </div>
   </section>
@@ -209,6 +211,58 @@
       });
     });
   </script>
+
+
+
+
+<script>
+  const form = document.getElementById('waitlistForm');
+  const alertBox = document.getElementById('formAlert');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        form.reset();
+        showAlert('🎉 You’re on the waitlist now!', 'success');
+      } else {
+        showAlert('⚠️ Something went wrong. Please try again.', 'error');
+      }
+    } catch (error) {
+      showAlert('🚨 Submission failed. Check your connection.', 'error');
+    }
+  });
+
+  function showAlert(message, type) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+    alertBox.style.padding = '10px';
+    alertBox.style.marginTop = '15px';
+    alertBox.style.borderRadius = '8px';
+    alertBox.style.fontWeight = '500';
+
+    if (type === 'success') {
+      alertBox.style.backgroundColor = '#d4edda';
+      alertBox.style.color = '#155724';
+    } else {
+      alertBox.style.backgroundColor = '#f8d7da';
+      alertBox.style.color = '#721c24';
+    }
+
+    // Hide after 5 seconds
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 5000);
+  }
+</script>
 
 
 
